@@ -12,7 +12,12 @@
 */
 
 Route::get('/', 'TeamsController@index');
-
 Route::get('/nba/teams/{id}', 'TeamsController@show');
-
 Route::get('/nba/players/{id}', 'PlayersController@show');
+
+Route::get('/register', 'RegisterController@create');
+Route::post('/register', 'RegisterController@store');
+
+Route::get('/logout', 'LoginController@destroy');
+Route::get('/login', 'LoginController@create');
+Route::post('/login', 'LoginController@store');
