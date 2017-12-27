@@ -15,6 +15,9 @@ Route::get('/', 'TeamsController@index');
 Route::get('/nba/teams/{id}', 'TeamsController@show');
 Route::get('/nba/players/{id}', 'PlayersController@show');
 
+Route::post('/nba/teams/{Id}/comments',
+ ['as' => 'comments-post', 'uses' => 'CommentsController@store']);
+
 Route::get('/register', 'RegisterController@create');
 Route::post('/register', 'RegisterController@store');
 

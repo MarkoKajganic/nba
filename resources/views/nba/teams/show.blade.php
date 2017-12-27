@@ -20,6 +20,24 @@
              
             </p>
 
+            <h4>Post a comment</h4>
+    <form method="POST" action="{{ route('comments-post', ['team_id' => $team->id]) }}">
+
+        {{ csrf_field() }}
+
+
+        <div class="form-group">
+            <label for="text">Comment:</label>
+            <textarea class="form-control" id="content" name="content"></textarea>
+            
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+    </form>
+
         @endforeach
 
         <br>
