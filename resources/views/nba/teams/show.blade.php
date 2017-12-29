@@ -14,10 +14,10 @@
         @foreach ($team->players as $player)
 
             <p>
-            <a href="/nba/players/{{ $player->id }}">
+            <a href="/nba/players/{{ $player->id }}"> 
 
              {{$player->first_name}} {{$player->last_name}}
-             
+             </a> 
             </p>
 
             <h4>Post a comment</h4>
@@ -25,6 +25,12 @@
 
         {{ csrf_field() }}
 
+
+        <div class="form-group">
+            <label for="text">Author:</label>
+            <textarea class="form-control" id="author" name="author"></textarea>
+            
+        </div>
 
         <div class="form-group">
             <label for="text">Comment:</label>

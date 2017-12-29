@@ -1,0 +1,1 @@
+<h3> <a href="localhost/verify/{{$user->id}}"> Click here to verify your registration </h3>
