@@ -26,3 +26,6 @@ Route::get('/verify/{id}', 'LoginController@verify');
 Route::get('/logout', 'LoginController@destroy');
 Route::get('/login', 'LoginController@create');
 Route::post('/login', 'LoginController@store');
+
+Route::get('/news' , 'NewsController@index');
+Route::get('/news/{id}' , 'NewsController@show');
